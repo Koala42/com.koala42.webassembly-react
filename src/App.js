@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Bar } from "react-chartjs-2";
 import "./App.css";
-import { updateGraph, factorializeFib, factorialize } from "./utils";
+import { factorializeFib, factorialize } from "./utils";
 export class App extends Component {
   state = {
     factorialData: {
@@ -36,7 +36,7 @@ export class App extends Component {
 
   loadWasm = async () => {
     try {
-      const wasm = await import("webassembly");
+      const wasm = await import("wasm-koala-blog");
       this.setState({ wasm });
     } catch (err) {
       console.error(`Unexpected error in loadWasm. [Message: ${err.message}]`);
@@ -83,28 +83,28 @@ export class App extends Component {
               <button
                 onClick={async () => {
                   const t0 = performance.now();
-                  await wasm.factorialize(200);
+                  await wasm.factorialize(500);
                   const t1 = performance.now();
                   this.updateGraph(t1 - t0, "wa", "fac");
                   const t2 = performance.now();
-                  factorialize(200);
+                  factorialize(500);
                   const t3 = performance.now();
                   this.updateGraph(t3 - t2, "js", "fac");
                 }}>
-                Calculate the factorial of 200
+                Calculate the factorial of 500
               </button>
               <button
                 onClick={async () => {
                   const t0 = performance.now();
-                  await wasm.factorialize_fib(40);
+                  await wasm.factorialize_fib(30);
                   const t1 = performance.now();
                   this.updateGraph(t1 - t0, "wa", "facFib");
                   const t2 = performance.now();
-                  factorializeFib(40);
+                  factorializeFib(30);
                   const t3 = performance.now();
                   this.updateGraph(t3 - t2, "js", "facFib");
                 }}>
-                Factorialize the first 40 numbers of the fibonacci sequence
+                Factorialize the first 30 numbers of the fibonacci sequence
               </button>
             </div>
             <div>

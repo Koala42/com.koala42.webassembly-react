@@ -1,5 +1,5 @@
 {
-  "name": "webassembly-react-2",
+  "name": "webassembly-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,7 +11,8 @@
     "react-chartjs-2": "^2.9.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.4.0",
-    "webassembly": "file:./webassembly/pkg"
+    "wasm-koala-blog": "^0.1.3",
+    "webassembly": "file:./wasm-koala-blog/pkg"
   },
   "scripts": {
     "start": "react-app-rewired start",

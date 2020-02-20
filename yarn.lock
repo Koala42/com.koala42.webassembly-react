@@ -10066,6 +10066,11 @@ wasm-dce@^1.0.0:
     babylon "^7.0.0-beta.39"
     webassembly-interpreter "0.0.30"
 
+wasm-koala-blog@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/wasm-koala-blog/-/wasm-koala-blog-0.1.3.tgz#330352292f1615c96fc37bb7bee3c32f76493514"
+  integrity sha512-T5j+l+fDAqMXt9TphvkUS7MOticRgp7cLZHzVAh5Par8f2CgNZL/rIhrdYge85/FT6vfmHdn7Dlfxi2WuL1NSg==
+
 wasm-loader@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/wasm-loader/-/wasm-loader-1.3.0.tgz#a123a6b6c9a9dac60de38449703be3537742e155"
@@ -10104,8 +10109,8 @@ webassembly-interpreter@0.0.30:
     long "^3.2.0"
     webassembly-floating-point-hex-parser "0.1.2"
 
-"webassembly@file:./webassembly/pkg":
-  version "0.1.0"
+"webassembly@file:./wasm-koala-blog/pkg":
+  version "0.1.3"
 
 webidl-conversions@^4.0.2:
   version "4.0.2"
